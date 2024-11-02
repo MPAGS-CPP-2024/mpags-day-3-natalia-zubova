@@ -67,9 +67,9 @@ bool processCommandLine(
                 ++i;
             }
         } else if (cmdLineArgs[i] == "--encrypt") {
-            commandLineSettings.encrypt = true;
+            commandLineSettings.cipherMode = CipherMode::Encrypt;
         } else if (cmdLineArgs[i] == "--decrypt") {
-            commandLineSettings.encrypt = false;
+            commandLineSettings.cipherMode = CipherMode::Decrypt;
         } else {
             // Have encoutered an unknown flag, output an error message,
             // set the flag to indicate the error and terminate the loop
